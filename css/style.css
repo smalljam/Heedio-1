@@ -51,12 +51,11 @@ body, .modes, .mode {
     padding-top: 100px;
     font-size: 28px;
 }
-.intro .responce .error {
+.intro .response .error {
     font-size: 21px;
     color: red;
-    padding-top: 10px!important;
 }
-.intro .responce p {
+.intro .response p {
     font-size: 21px;
     color: slateblue;
     padding-top: 10px!important;
@@ -125,7 +124,7 @@ hr.footer {
         padding: 0% 10% 0 20%;
     }
 }
-@media only screen and (min-width: 640px) and (max-width: 1024px){
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
     .intro {
         margin: 5% 0 0 10%;
     }

@@ -19,20 +19,10 @@
          }
      }, 500);
 
-     $(".button.down").on("click", function() {
-         $("html, body").animate({
-             scrollTop: $(".mode").height() - $(window).height()
-         }, $(".mode").height());
-     });
-     $(".button.up").on("click", function() {
-         $("html, body").animate({
-             scrollTop: 0
-         }, $(".mode").height());
-     });
-     $('#newsletter').submit(function() {
+     $('form').submit(function() {
          var $this = $(this),
-             $response = $('#response'),
-             $mail = $('#signup-email'),
+             $response = $this.parent().find('.response'),
+             $mail = $this.find('input[name*="signup-email"]'),
              testmail = /^[^0-9][A-z0-9._%+-]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/,
              hasError = false;
 
@@ -56,6 +46,7 @@
                  data: $this.serialize()
              }).done(function(data) {
                  $response.removeClass('loading');
+                 $this.fadeOut(100);
                  $response.html('<p class="success">' + data.message + '</p>');
              }).fail(function() {
                  $response.removeClass('loading');
