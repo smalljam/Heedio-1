@@ -1,0 +1,164 @@
+@font-face {
+    font-family: '../fonts/proxima_novasemibold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/proximanova-semibold-webfont.woff2') format('woff2'), url('../fonts/proximanova-semibold-webfont.woff') format('woff'), url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'), url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body, .modes, .mode {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    background: #d0d0d0;
+}
+.wrapper {
+    margin: 0;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+.footer {
+    height: 4em;
+}
+.mode {
+    position: absolute;
+    padding: 5% 10% 0 20%;
+}
+.mode img {
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.back {
+    position: fixed;
+    z-index: 9;
+}
+.intro {
+    text-transform: uppercase;
+    margin: 5% 5% 0 10%;
+    font-family: '../fonts/proxima_novasemibold';
+}
+.intro .logo {
+    font-size: 28px;
+    color: #ed1c24;
+}
+.intro .text {
+    color: white;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.05);
+}
+.intro .text p {
+    padding-top: 100px;
+    font-size: 28px;
+}
+.intro .responce .error {
+    font-size: 21px;
+    color: red;
+    padding-top: 10px!important;
+}
+.intro .responce p {
+    font-size: 21px;
+    color: slateblue;
+    padding-top: 10px!important;
+}
+.intro input[type="submit"], .intro input[type="submit"]:active {
+    background-color: transparent;
+    border: solid 2px #ed1c24;
+    border-radius: 5px;
+    color: #ed1c24;
+    padding: 10px 0 25px 0;
+    height: 40px;
+    font-size: 16px;
+    font-family: '../fonts/proxima_novasemibold';
+}
+.intro input[type="submit"]:active {
+    background-color: transparent;
+}
+.intro .column, .columns {
+    padding-left: 0
+}
+.intro input[type="email"], .intro input[type="email"]:focus {
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 0px 3px rgba(0, 0, 0, 0.05);
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px -2px 0px 0px rgba(255, 255, 255, 1);
+}
+.intro input::-webkit-input-placeholder {
+    color: #fff;
+}
+.intro form .row {
+    margin: 0;
+}
+hr.footer {
+    border: solid 1px;
+    height: 1px;
+    color: #fff;
+    background-color: #fff; //Modern Browsers
+    padding: 0;
+    margin: 0;
+}
+@media only screen and (max-width: 640px) {
+    .back {
+        position: static;
+    }
+    .intro .logo {
+        font-size: 20px
+    }
+    .intro .text p:first-child {
+        padding-top: 30px;
+    }
+    .intro .text p {
+        padding-bottom: 15px;
+        padding-top: 0px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .intro {
+        margin: 6% 0% 0 5%;
+    }
+    .mode {
+        padding: 0% 10% 0 20%;
+    }
+}
+@media only screen and (min-width: 640px) and (max-width: 1024px){
+    .intro {
+        margin: 5% 0 0 10%;
+    }
+    .intro .text p {
+        padding-top: 40px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .mode {
+        padding: 5% 10% 0 35%;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .intro .text p {
+        font-size: 28px;
+        padding-top: 60px;
+    }
+    .intro .text p:first-child {
+        padding-top: 100px;
+    }
+    .mode {
+        padding: 5% 15% 0 40%;
+    }
+}
+@media only screen and (min-width: 1441px) {
+    .intro .text p {
+        font-size: 32px;
+        padding-top: 100px;
+    }
+    .intro .text p:first-child {
+        padding-top: 160px;
+    }
+    .mode {
+        padding: 5% 5% 0 35%;
+    }
+}
