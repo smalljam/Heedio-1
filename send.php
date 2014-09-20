@@ -34,7 +34,7 @@ try {
 
             if ($q) {
                 $status = "success";
-                $message = "Success";
+                $message = "Success!";
             } else {
                 $status = "error";
                 $message = "An error occurred, please try again";

@@ -57,7 +57,7 @@ body, .modes, .mode {
 }
 .intro .response p {
     font-size: 21px;
-    color: slateblue;
+    color: white;
     padding-top: 10px!important;
 }
 .intro input[type="submit"], .intro input[type="submit"]:active {
