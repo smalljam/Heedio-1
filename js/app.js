@@ -62,6 +62,7 @@
 
 
  function setImageSize() {
+     //absolute image parrent height
      var biggestHeight = "0";
      $(".modes *").each(function() {
          if ($(this).height() > biggestHeight) {
@@ -69,6 +70,11 @@
          }
      });
      $(".modes").height(biggestHeight);
+     if ($(window).height() > $(window).width() && $(window).width() > 640) {
+         document.querySelector("meta[name=viewport]").setAttribute('content', 'width=' + $(window).width() / 2 + ' initial-scale=2, maximum-scale=2.0, user-scalable=0');
+     } else if ($(window).height() < $(window).width()) {
+         document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+     }
  }
 
  function hasScrolled() { //костильок
@@ -86,7 +92,11 @@
      for (var i = 1; i < position.length - 1; i++) {
          if (y >= position[i] * imageH + imagePosition && scrolledDown) {
              if ($(".mode" + (i)).is(":visible")) {
-                 $(".mode" + (i)).fadeOut(600);
+                 $(".mode" + (i)).fadeOut(500);
+               /* $(".mode" + (i)).hide();
+                 $(".mode" + (i)).animate({
+                     opacity: 0
+                 });*/
                  if (i == 3) {
                      $(".intro .text").eq(1).fadeIn(600);
                      $(".intro .text").eq(0).hide();
@@ -96,7 +106,7 @@
 
 
              if ($(".mode" + (i)).is(":hidden")) {
-                 $(".mode" + (i)).fadeIn(600);
+                 $(".mode" + (i)).fadeIn(500);
 
                  if (i == 3) {
                      $(".intro .text").eq(0).fadeIn(600);
