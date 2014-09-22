@@ -24,11 +24,11 @@ body, .modes, .mode {
 .mode {
     position: absolute;
     padding: 5% 10% 0 20%;
+    transition: 1s;
 }
 img.mode {
     width: 100%;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+   
 }
 .back {
     position: fixed;

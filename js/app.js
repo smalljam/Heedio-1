@@ -91,8 +91,8 @@
          scrolledDown = true;
      for (var i = 1; i < position.length - 1; i++) {
          if (y >= position[i] * imageH + imagePosition && scrolledDown) {
-             if ($(".mode" + (i)).is(":visible")) {
-                 $(".mode" + (i)).fadeOut(500);
+               if ($(".mode" + (i)).css('opacity') == '1') {
+                  $(".mode" + (i)).css('opacity', '0');
                /* $(".mode" + (i)).hide();
                  $(".mode" + (i)).animate({
                      opacity: 0
@@ -105,9 +105,9 @@
          } else if (y <= position[i] * imageH + imagePosition && !scrolledDown) {
 
 
-             if ($(".mode" + (i)).is(":hidden")) {
-                 $(".mode" + (i)).fadeIn(500);
-
+             if ($(".mode" + (i)).css('opacity') == '0') {
+                   $(".mode" + (i)).css('opacity', '1');
+               
                  if (i == 3) {
                      $(".intro .text").eq(0).fadeIn(600);
                      $(".intro .text").eq(1).hide();
