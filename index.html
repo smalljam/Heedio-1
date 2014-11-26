@@ -1,128 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <link rel="stylesheet" href="css/responcive3.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Heedio</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CarCar</title>
+	<meta name="keywords"  content="CarCar,awesome,startup" />
+	<meta name="Resource-type" content="Document" />
 
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1" />
-    <meta name="google-site-verification" content="XmOIYadEExXLAE7rnJkqFAv7OMDkZuFAoh4yXPB9Fts" />
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 
-    <script src="js/picturefill.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				navigation: true,
+				navigationPosition: 'right'
+			});
+		});
+	</script>
+
 </head>
-
 <body>
 
-    <div class="back  hidden-for-small-only">
-        <div class="intro large-5 medium-6">
-            <div class="logo">Heedio</div>
-            <div class="text">
-                <p>Monitor your heart rate
-                    <br>without anything.</p>
-                <p>Almost
-                    <br>without anything...</p>
+<div id="fullpage">
+	<div class="section active" id="section0">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="fixed-header">
+						<h1>HEEDIO</h1>
+					</div>
+					<div class="text-box">
+						<p>is a solution for heart diseases diagnostic.</p>
+					</div>
+					<a href="#">
+						<img class="fixed-footer" src="img/app-store.png">
+					</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-box">
+						<p>is a device, an application and a platform.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-box">
+						<p>is affordable device<br>for continuous data harvesting.</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+		<div class="section" id="section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-box">
+						<p>is simple application<br>for day-to-day use and realtime feedback.</p>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+		<div class="section" id="section2">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="text-box">
+						<p>is open platform<br>that connects physicians, scientists and people’s data.</p>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
 
-            </div>
-
-            <div class="text" style="display: none;">
-
-                <p>Stick-on electronic patch
-                    <br>that could be placed
-                    <br>everywhere on your body.</p>
-                <p>Stay tuned with updates:</p>
-
-                <form action="send.php" method="post" name="newsletter">
-                    <div class="row">
-                        <div class="medium-9  left columns">
-                            <input type="email" name="signup-email" value="" placeholder="your@email.com">
-                        </div>
-                        <div class="medium-3  left columns">
-                            <input class="button expand" type="submit" value="Submit" name="signup-button">
-                        </div>
-
-                    </div>
-                </form>
-                <div class="response"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="wrapper">
-        <div class="row visible-for-small-only">
-            <div class="intro ">
-                <div class="logo">Heedio</div>
-                <div class="text">
-                    <p>Monitor heart rate
-                        <br>without anything.</p>
-                    <p>Almost
-                        <br>without anything...</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-10 medium-9 small-12 right columns ">
-                <div class='modes'>
-                    <picture class='mode mode4'>
-                        <source srcset="img/small/04.jpg" media="(max-width: 640px)">
-                            <source srcset="img/mid/04.jpg" media="(min-width: 640px) and (max-width: 1440px)">
-                                <source srcset="img/large/04.jpg" media="(min-width: 1440px)">
-                                    <img src="img/small/04.jpg">
-                    </picture>
-                    <picture class='mode mode3'>
-                        <source srcset="img/small/03.jpg" media="(max-width: 640px)">
-                            <source srcset="img/mid/03.jpg" media="(min-width: 640px) and (max-width: 1440px)">
-                                <source srcset="img/large/03.jpg" media="(min-width: 1440px)">
-                                    <img src="img/small/03.jpg">
-                    </picture>
-                    <picture class='mode mode2'>
-                        <source srcset="img/small/02.jpg" media="(max-width: 640px)">
-                            <source srcset="img/mid/02.jpg" media="(min-width: 640px) and (max-width: 1440px)">
-                                <source srcset="img/large/02.jpg" media="(min-width: 1440px)">
-                                    <img src="img/small/02.jpg">
-                    </picture>
-                    <picture class='mode mode1'>
-                        <source srcset="img/small/01.jpg" media="(max-width: 640px)">
-                            <source srcset="img/mid/01.jpg" media="(min-width: 640px) and (max-width: 1440px)">
-                                <source srcset="img/large/01.jpg" media="(min-width: 1440px)">
-                                    <img src="img/small/01.jpg">
-                    </picture>
-                </div>
-            </div>
-            <hr class="footer visible-for-small-only">
-        </div>
-
-
-        <div class="row visible-for-small-only">
-
-            <div class="intro">
-                <div class="text">
-
-                    <p>Stick-on electronic patch
-                        <br>that could be placed
-                        <br>everywhere on your body.</p>
-                    <p>Stay tuned with updates:</p>
-
-                    <form action="send.php" method="post" name="newsletter">
-                        <div class="row">
-                            <div class="medium-9  left columns">
-                                <input type="email" name="signup-email" value="" placeholder="your@email.com">
-                            </div>
-                            <div class="medium-3  left columns">
-                                <input class="button expand" type="submit" value="Submit" name="signup-button">
-                            </div>
-
-                        </div>
-                    </form>
-                    <div class="response"></div>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/app.js"></script>
-
+	<div class="section last" id="section3">
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h1>Stay Informed</h1>
+					<p>.</p>
+					<div class="w-form">
+            			<form class="form" id="email-form" action="send.php" method="post" name="newsletter">
+               				<input class="w-input input" id="node-2" required="required" type="email" name="signup-email" value="" placeholder="Email">
+               				<input class="w-button button" type="submit" value="Notify me" data-wait="Please wait...">
+           				</form>
+           				
+       				</div>
+					<div class="done">
+           				<h1>Everything fine!</h1>
+           			</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
+</html>
