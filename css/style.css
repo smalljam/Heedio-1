@@ -45,6 +45,7 @@ span.red {
     }
     .fixed-header h1 {
         text-align: center;
+        margin-left: -20px;
     }
     .text-box {
         padding-top: 5%;
