@@ -41,11 +41,15 @@ span.red {
 @media screen and (max-width: 767px){
     .fixed-header {
         top: 1%;
-        left: 40%;
+        width: 100%;
+    }
+    .fixed-header h1 {
+        text-align: center;
     }
     .text-box {
         padding-top: 5%;
         text-align: center;
+        margin: 0 20px;
     }
     .last h1 {
         text-align: center;
@@ -53,26 +57,14 @@ span.red {
     h1 {
         font-size: 38px;
     }
+    .last h1 {
+        font-size: 30px;
+    }
     p {
         font-size: 28px;
     }
-}
-
-@media screen and (max-width: 479px){
-    .fixed-header {
-    	top: 1%;
-    	left: 35%;
-    }
-    .text-box {
-    	padding-top: 5%;
-    	text-align: center;
-    }
-
-    .last h1 {
-        text-align: center;
-    }
-    p {
-    	font-size: 24px;
+    #fp-nav.right {
+        right: 0px;
     }
 }
 
