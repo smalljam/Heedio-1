@@ -1,0 +1,143 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title></title>
+  <link href="bower_components/vis/dist/vis.css" rel="stylesheet" type="text/css" />
+  <style>
+    body, html {
+      font-family: sans-serif;
+      font-size: 11pt;
+    }
+
+    .my_content {
+      display: none;
+    }
+
+    .vis.timeline .item.background.negative {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+    .vis.timeline .item.background.marker {
+      border-left: 2px solid green;
+    }
+
+    .vis.timeline .item .content,
+    .vis.timeline .item.range .content {
+      overflow: visible
+    }
+
+    #visualization {
+      width: 100%;
+    }
+  </style>
+  <script src="bower_components/vis/dist/vis.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+
+  <script src="roadmap.js"></script>
+</head>
+<body>
+
+<div id="visualization"></div>
+
+<script>
+  var groups = new vis.DataSet([
+    {id: 1, content: 'Trips', className: 'trips'},
+    {id: 2, content: 'Public activities'},
+    {id: 3, content: 'Milestones'},
+    {id: 4, content: ''}
+  ]);
+
+  var items = new vis.DataSet(ROADMAP);
+
+  var container = document.getElementById('visualization');
+  var options = {
+    start: '2014-01-01',
+    end: '2017-01-01'
+  };
+
+  var timeline = new vis.Timeline(container);
+  timeline.setOptions(options);
+  timeline.setGroups(groups);
+  timeline.setItems(items);
+
+  timeline.on('select', function(selection){
+    $('.my_content').hide();
+    $('.my_header').hide();
+
+    var data = items.get(selection.items[0])    
+    if( data.id ) {
+      $('#'+data.id).show();
+      makeHeader(data)
+    }
+
+  });
+
+  function makeHeader(data){
+    var format = "MMM D YYYY";
+    var time = moment(data.start).format(format);
+
+    if( data.end ){
+      time += ' — '+moment(data.end).format(format);
+    }
+
+    // var html = '<h3>'+data.content+' <small>'+time+'</small></h3>';
+    var html = '<h3>'+time+'</h3>'
+
+    $('.my_header').html(html).show();
+  }
+</script>
+
+<p>&nbsp;</p>
+<div class="my_header"></div>
+
+
+
+<div class="my_content" id="materials">
+  <ul>
+    <li>pitch slides</li>
+    <li>roadmap</li>
+    <li>competitors analysis</li>
+    <li>manufacture plan</li>
+    <li>sales plan</li>
+    <li>data science</li>
+    <li>product vision</li>
+    <li>campaign plan</li>
+    <li>base apps</li>
+    <li>sdk draft</li>
+  </ul>
+</div>
+
+<div class="my_content" id="prototype">
+  requirements:
+  <ul>
+    <li>2 mems microphones</li>
+    <li>accelerometer</li>
+    <li>BLE</li>
+    <li>SD card</li>
+    <li>cell battery</li>
+  </ul>
+  expectations:
+  <ul>
+    <li>raw data from microphones and accelerometer stored on SD card</li>
+    <li>raw accelerometer data transfered via BLE to mobile phone</li>
+    <li>
+      there should be 3Gb/24hours data on SD card (<a href="#" onclick="$('#calculation_data').toggle()">calculations</a>)
+      <p id="calculation_data" style="display:none;">
+        microphone sample rate is 8KHz<br>
+        16Kb/sec => 960Kb/min => 57.6Mb/hour
+        <br><br>
+        2 microphones/24 hours = 2764.8Mb/24hours
+        <br><br>
+        accelerometer is 20Hz, [X,Y,Z] 2 bytes each<br>
+        30b/sec => 2.6Mb/24hours
+        <br><br>
+        plus metadata, etc
+      </p>
+    </li>
+    <li>battery should work at least 2 days</li>
+  </ul>
+  result:
+</div>
+</body>
+</html>
